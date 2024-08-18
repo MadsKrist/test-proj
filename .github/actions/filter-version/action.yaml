@@ -22,9 +22,11 @@ runs:
       shell: bash
       id: check-changed-files
       run: |
+
+
         for changed_file in ${{ steps.get-changed-files.outputs.modified }}; do
           echo "${changed_file}"
-          if [ "${changed_file}" == *"__about__.py"* ]; then
+          if [["${changed_file}" == *"__about__.py"* ]]; then
             echo "found"
             echo "version-changed=true" >> $GITHUB_OUTPUT
             break
