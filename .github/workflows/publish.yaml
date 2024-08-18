@@ -33,7 +33,7 @@ jobs:
         name: Checkout
 
       - uses: ./.github/actions/publish-pypi
-        name: Check version
+        name: Build and publish
         id: build-publish
         with:
           pypi-token: ${{ secrets.PYPITOKEN }}
