@@ -33,7 +33,9 @@ runs:
         fi
 
         for changed_file in ${{ steps.get-changed-files.outputs.modified }}; do
-          echo "hello"
+          if [["${changed_file}" == *"__about__.py"* ]]; then
+            echo "hello"
+          fi
         done
         #for changed_file in ${{ steps.get-changed-files.outputs.modified }}; do
         #  echo "${changed_file}"
