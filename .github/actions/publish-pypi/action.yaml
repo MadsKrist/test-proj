@@ -38,4 +38,4 @@ runs:
     - name: Publish on PyPI
       shell: bash
       if: github.ref == 'refs/heads/main'
-      run: hatch publish -u __token__ -a ${{ secrets.PYPITOKEN }}
+      run: hatch publish -u __token__ -a ${{ inputs.pypi-token }}
