@@ -23,7 +23,7 @@ runs:
       id: check-changed-files
       run: |
         for changed_file in ${{ steps.get-changed-files.outputs.modified }}; do
-          echo "${changed_file}" == *"__about__.py"*
+          echo ["${changed_file}" == *"__about__.py"*]
           if [ "${changed_file}" == *"__about__.py"* ]; then
             echo "version-changed=true" >> $GITHUB_OUTPUT
             break
