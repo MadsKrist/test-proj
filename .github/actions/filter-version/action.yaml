@@ -32,6 +32,9 @@ runs:
           echo "not here"
         fi
 
+        for changed_file in ${{ steps.get-changed-files.outputs.modified }}; do
+          echo "hello"
+        done
         #for changed_file in ${{ steps.get-changed-files.outputs.modified }}; do
         #  echo "${changed_file}"
         #  if ["${changed_file}" == *"__about__.py"* ]; then
