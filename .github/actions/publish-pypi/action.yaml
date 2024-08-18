@@ -4,9 +4,6 @@ inputs:
   pypi-token:
     description: "PyPi publish token"
     required: true
-  project-name:
-    description: "PyPi project name"
-    required: true
 runs:
   using: composite
   steps:

@@ -1,5 +1,6 @@
 name: Publish Python Package
 
+#hatch version minor; git add .; git commit -m "auto"; git push
 on:
   push:
     branches: ["main"]
@@ -37,4 +38,3 @@ jobs:
         id: build-publish
         with:
           pypi-token: ${{ secrets.PYPITOKEN }}
-          project-name: MadsKrist.test-proj
