@@ -26,7 +26,7 @@ runs:
         STR='GNU/Linux is an operating system'
         SUB='Linux'
 
-        if [[ "$STR" == *"$SUB"* ]]; then
+        if [[ "$STR" == *"Linux"* ]]; then
           echo "It's there."
         else
           echo "not here"
