@@ -28,6 +28,8 @@ runs:
 
         if [ "$STR" == *"$SUB"* ]; then
           echo "It's there."
+        else
+          echo "not here"
         fi
 
         #for changed_file in ${{ steps.get-changed-files.outputs.modified }}; do
