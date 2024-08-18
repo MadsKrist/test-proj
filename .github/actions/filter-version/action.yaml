@@ -23,10 +23,16 @@ runs:
       id: check-changed-files
       run: |
 
+        STR='GNU/Linux is an operating system'
+        SUB='Linux'
+
+        if [ "$STR" == *"$SUB"* ]; then
+          echo "It's there."
+        fi
 
         for changed_file in ${{ steps.get-changed-files.outputs.modified }}; do
           echo "${changed_file}"
-          if [["${changed_file}" == *"__about__.py"* ]]; then
+          if ["${changed_file}" == *"__about__.py"* ]; then
             echo "found"
             echo "version-changed=true" >> $GITHUB_OUTPUT
             break
